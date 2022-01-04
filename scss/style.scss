@@ -21,7 +21,7 @@ body {
 	margin: 0 auto;
 }
 
-.section-heading{
+.section-heading {
 	text-align: center;
 	color: #000;
 	font-size: 3em;
@@ -124,11 +124,22 @@ body {
 	}
 
 	&__content {
+		display: flex;
+		flex-direction: column;
 		position: relative;
 		padding: 1em;
 		&-item {
 			padding: 1em 0;
 			font-size: 1.8rem;
+		}
+
+		&-cta {
+			font-size: 1.8rem;
+			text-decoration: none;
+			padding: 0.5em;
+			background-color: #00ff80;
+			border-radius: 10px;
+			align-self: center;
 		}
 		z-index: 1;
 	}
@@ -184,7 +195,7 @@ body {
 		&-link {
 			margin-top: 2em;
 			padding: 1em;
-			background-color: #045de9;
+			background-color: #3377ff;
 			color: #ddd;
 			font-size: 1.6rem;
 			border-radius: 10px;
@@ -220,7 +231,7 @@ body {
 					height: 80px;
 					width: 80px;
 					font-size: 3.6rem;
-					background-color: #045de9;
+					background-color: #3377ff;
 					border-radius: 50%;
 				}
 			}
@@ -237,13 +248,13 @@ body {
 		text-align: center;
 		perspective: 1000px;
 
-		&:hover{
-			.offers__card-img{
+		&:hover {
+			.offers__card-img {
 				transform: rotateY(-180deg);
 				opacity: 0;
 			}
 
-			.offers__card-info{
+			.offers__card-info {
 				transform: rotateY(0);
 				opacity: 1;
 			}
@@ -258,7 +269,7 @@ body {
 			background-position: center;
 			transition: transform 1s, opacity 1s;
 
-			&-title{
+			&-title {
 				position: absolute;
 				top: 1.2em;
 				font-size: 2.8rem;
@@ -287,10 +298,11 @@ body {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			background-color: #eec0c6;
-			background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+			background-color: #0cbaba;
+			background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+			color: #ddd;
 			border-radius: 10px;
-			opacity:0;
+			opacity: 0;
 			transform: rotateY(180deg);
 			transition: transform 1s, opacity 1s;
 
@@ -302,25 +314,23 @@ body {
 				font-size: 2.8rem;
 			}
 
-			&-list{
+			&-list {
 				margin: 0 auto;
 				width: 70%;
 				list-style: none;
 
-				&-item{
+				&-item {
 					padding: 1em;
 					font-size: 1.4rem;
 					border-bottom: 1px solid #333;
 
-					&:last-child{
+					&:last-child {
 						border-bottom: none;
 					}
 				}
-
-				
 			}
 
-			&-btn{
+			&-btn {
 				position: absolute;
 				bottom: 1em;
 				left: 50%;
@@ -328,8 +338,8 @@ body {
 				font-size: 1.4rem;
 				text-decoration: none;
 				padding: 1em;
-				background-color: #045de9;
-				color: #ddd;
+				background-color: #00ff80;
+				color: #333;
 				border-radius: 10px;
 				width: 70%;
 			}
@@ -337,45 +347,45 @@ body {
 	}
 }
 
-.contact{
+.contact {
 	position: relative;
 	background-image: url('../img/email-6370595_640.jpg');
 	background-size: cover;
 	background-position: center;
-	.section-heading{
+	.section-heading {
 		text-align: left;
 		padding: 1.5rem;
 		color: #ddd;
 	}
 
-	.underline{
+	.underline {
 		margin-left: 1.5em;
 		background-color: #ddd;
 	}
 
-	&__box{
+	&__box {
 		position: relative;
 		padding: 2em;
-		&-item{
+		&-item {
 			display: block;
 			font-size: 2rem;
 			margin: 2em 0;
 			padding: 1em;
 			text-decoration: none;
 			color: #ddd;
-			&--social{
+			&--social {
 				display: inline;
 				margin: 2em 2em 2em 0;
 			}
 
-			&--social:last-of-type{
-				margin-left: 2em ;
+			&--social:last-of-type {
+				margin-left: 2em;
 			}
 		}
 		z-index: 2;
 	}
 
-	&__shadow{
+	&__shadow {
 		position: absolute;
 		top: 0;
 		width: 100%;
@@ -437,22 +447,20 @@ body {
 			&-item {
 				padding: 2em 0;
 				font-size: 2rem;
-				&:last-of-type{
+				&:last-of-type {
 					margin-bottom: 6em;
 				}
 			}
 
-			&-cta{
+			&-cta {
 				position: absolute;
 				bottom: 1em;
 				left: 50%;
 				transform: translateX(-50%);
 				font-size: 2rem;
 				text-decoration: none;
-				padding: 1em;
-				background-color: seagreen;
+				padding: 0.5em 1em;
 				border-radius: 10px;
-				
 			}
 		}
 
@@ -519,32 +527,31 @@ body {
 		}
 	}
 
-	.contact{
+	.contact {
 		margin-top: 350px;
 		display: flex;
 		justify-content: end;
 		background-image: url('../img/email-6370595_1920.jpg');
-		&__box{
+		&__box {
 			width: 50%;
-			&-item{
+			&-item {
 				font-size: 2.4rem;
 			}
 		}
 
-		&__shadow{
+		&__shadow {
 			width: 50%;
 		}
 
-		.underline{
+		.underline {
 			width: 150px;
 		}
 	}
 }
 
-
-@media (min-width: 1100px){
-	.offers{
-		&__card{
+@media (min-width: 1100px) {
+	.offers {
+		&__card {
 			margin: 1.5em;
 			width: 22%;
 		}
