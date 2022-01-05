@@ -6,7 +6,7 @@
 	box-sizing: border-box;
 }
 
-html {
+:root {
 	font-size: 62.5%;
 }
 
@@ -22,9 +22,8 @@ body {
 }
 
 .section-heading {
-	text-align: center;
 	color: #000;
-	font-size: 3em;
+	font-size: 3rem;
 }
 
 .nav {
@@ -100,7 +99,7 @@ body {
 .underline {
 	width: 150px;
 	height: 4px;
-	background-color: #ddd;
+	background-color: #3b90eb;
 }
 
 .header {
@@ -136,8 +135,10 @@ body {
 		&-cta {
 			font-size: 1.8rem;
 			text-decoration: none;
-			padding: 0.5em;
-			background-color: #00ff80;
+			margin-top: 1em;
+			padding: 1em;
+			background-color: #3b90eb;
+			color: #eee;
 			border-radius: 10px;
 			align-self: center;
 		}
@@ -168,11 +169,12 @@ body {
 		color: #000;
 
 		&-text {
-			h3 {
-				margin-bottom: 1em;
-			}
 			padding: 2em;
 			font-size: 2rem;
+
+			&-content {
+				margin-top: 3em;
+			}
 		}
 
 		&-img {
@@ -195,9 +197,9 @@ body {
 		&-link {
 			margin-top: 2em;
 			padding: 1em;
-			background-color: #3377ff;
-			color: #ddd;
-			font-size: 1.6rem;
+			background-color: #3b90eb;
+			color: #eee;
+			font-size: 1.8rem;
 			border-radius: 10px;
 			cursor: pointer;
 		}
@@ -215,13 +217,14 @@ body {
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
-				color: #000;
+
 				padding: 1em;
 
 				&-text {
 					font-size: 2rem;
 					font-weight: bold;
 					padding: 0.5em;
+					color: #333;
 				}
 
 				&-icon {
@@ -231,7 +234,8 @@ body {
 					height: 80px;
 					width: 80px;
 					font-size: 3.6rem;
-					background-color: #3377ff;
+					background-color: #3b90eb;
+
 					border-radius: 50%;
 				}
 			}
@@ -240,6 +244,13 @@ body {
 }
 
 .offers {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	.underline {
+		align-self: center;
+	}
 	&__card {
 		position: relative;
 		margin: 2em;
@@ -298,8 +309,9 @@ body {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
-			color: #333;
+			background-color: #2a2a72;
+			background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+			color: #eee;
 			border-radius: 10px;
 			opacity: 0;
 			transform: rotateY(180deg);
@@ -321,7 +333,7 @@ body {
 				&-item {
 					padding: 1em;
 					font-size: 1.4rem;
-					border-bottom: 1px solid #333;
+					border-bottom: 1px solid #eee;
 
 					&:last-child {
 						border-bottom: none;
@@ -337,8 +349,8 @@ body {
 				font-size: 1.4rem;
 				text-decoration: none;
 				padding: 1em;
-				background-color: #00ff80;
-				color: #333;
+				background-color: #3b90eb;
+				color: #eee;
 				border-radius: 10px;
 				width: 70%;
 			}
@@ -353,13 +365,12 @@ body {
 	background-position: center;
 	.section-heading {
 		text-align: left;
-		padding: 1.5rem;
-		color: #ddd;
+		padding: 1.5rem 1.5rem 0 1.5rem;
+		color: #eee;
 	}
 
 	.underline {
 		margin-left: 1.5em;
-		background-color: #ddd;
 	}
 
 	&__box {
@@ -371,7 +382,7 @@ body {
 			margin: 2em 0;
 			padding: 1em;
 			text-decoration: none;
-			color: #ddd;
+			color: #eee;
 			&--social {
 				display: inline;
 				margin: 2em 2em 2em 0;
@@ -440,7 +451,8 @@ body {
 			bottom: -100px;
 			left: 200px;
 			padding: 2em;
-			background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+			background-color: #2a2a72;
+			background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
 			border-radius: 10px;
 
 			&-item {
@@ -488,6 +500,14 @@ body {
 			}
 
 			&-text {
+				.section-heading {
+					text-align-last: left;
+				}
+
+				.underline {
+					background-color: #3b90eb;
+				}
+
 				width: 50%;
 				padding: 3em;
 				p {
@@ -514,6 +534,7 @@ body {
 	.offers {
 		margin-top: 350px;
 		padding: 5em;
+
 		&__cards {
 			display: flex;
 			justify-content: center;
@@ -543,6 +564,7 @@ body {
 		}
 
 		.underline {
+			background-color: #3b90eb;
 			width: 150px;
 		}
 	}
